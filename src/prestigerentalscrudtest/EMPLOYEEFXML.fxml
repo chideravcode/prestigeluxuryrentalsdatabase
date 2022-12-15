@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.gluonhq.charm.glisten.control.AutoCompleteTextField?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="carsview" prefHeight="400.0" prefWidth="800.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="prestigerentalscrudtest.FXMLController">
+   <children>
+      <VBox layoutX="84.0" layoutY="11.0" prefHeight="194.0" prefWidth="80.0" spacing="10.0">
+         <children>
+            <Label text="VIN" textFill="WHITE">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label text="MAKE" textFill="WHITE">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label text="MODEL" textFill="WHITE">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label text="YEAR" textFill="WHITE">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label text="TYPE" textFill="WHITE">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+         </children>
+      </VBox>
+      <VBox layoutX="164.0" layoutY="11.0" prefHeight="194.0" prefWidth="242.0" spacing="16.0">
+         <children>
+            <TextField fx:id="textfieldcarvin" />
+            <AutoCompleteTextField fx:id="textfieldcarmake" />
+            <TextField fx:id="textfieldcarmodel" />
+            <AutoCompleteTextField fx:id="textfieldcaryear" />
+            <AutoCompleteTextField fx:id="textfieldcartype" />
+         </children>
+      </VBox>
+      <TableView fx:id="tableviewcars" layoutX="84.0" layoutY="219.0" prefHeight="166.0" prefWidth="632.0">
+        <columns>
+          <TableColumn fx:id="columnvin" prefWidth="190.0" text="VIN" />
+          <TableColumn fx:id="columnmake" prefWidth="110.0" text="MAKE" />
+            <TableColumn fx:id="columnmodel" prefWidth="110.0" text="MODEL" />
+            <TableColumn fx:id="columnyear" prefWidth="110.0" text="YEAR" />
+            <TableColumn fx:id="columntype" prefWidth="110.0" text="TYPE" />
+        </columns>
+      </TableView>
+      <Button fx:id="buttondelete" layoutX="422.0" layoutY="135.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="26.0" prefWidth="283.0" style="-fx-background-color: black; -fx-border-color: white;" text="DELETE" textFill="WHITE" />
+      <Button fx:id="buttonupdate" layoutX="422.0" layoutY="94.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="26.0" prefWidth="283.0" style="-fx-background-color: black; -fx-border-color: white;" text="UPDATE" textFill="WHITE" />
+      <Button fx:id="buttoninsert" layoutX="422.0" layoutY="54.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="26.0" prefWidth="283.0" style="-fx-background-color: black; -fx-border-color: white;" text="INSERT" textFill="WHITE" />
+   </children>
+</AnchorPane>
